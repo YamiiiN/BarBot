@@ -1,0 +1,179 @@
+.home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.home-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.home-title {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.highlight {
+  color: #ff4444;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 2.5rem;
+  line-height: 1.4;
+}
+
+.home-button {
+  font-size: 1.1rem;
+  padding: 15px 30px;
+}
+
+.home-drinks {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  max-width: 400px;
+}
+
+.drink-glass {
+  position: relative;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.yellow-drink {
+  width: 80px;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent 30%, #ffeb3b 30%);
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.red-martini {
+  width: 100px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent 20%, #ff4444 20%);
+  border: 2px solid #ddd;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: relative;
+}
+
+.martini-stem {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 40px;
+  background-color: #ddd;
+}
+
+.martini-stem::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+.red-cocktail {
+  width: 70px;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent 40%, #ff6b6b 40%);
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .home {
+    padding-top: 70px;
+  }
+
+  .home-container {
+    padding: 0 1rem;
+  }
+
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+
+  .home-drinks {
+    max-width: 300px;
+    gap: 1rem;
+  }
+
+  .drink-glass {
+    transform: scale(0.8);
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .home-content {
+    gap: 2rem;
+  }
+
+  .home-drinks {
+    max-width: 350px;
+  }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .home {
+    padding-top: 60px;
+  }
+
+  .home-title {
+    font-size: 2.8rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}

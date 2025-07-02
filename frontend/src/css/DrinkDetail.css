@@ -1,0 +1,246 @@
+.drink-detail {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  display: flex;
+}
+
+.drink-detail-content {
+  margin-left: 250px;
+  flex: 1;
+  padding: 2rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #ff4444;
+}
+
+.drink-detail-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.drink-info {
+  flex: 1;
+  max-width: 500px;
+}
+
+.drink-title {
+  font-size: 3rem;
+  color: #ff4444;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.drink-description {
+  margin-bottom: 2rem;
+}
+
+.drink-description p {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.ingredients-section {
+  margin-bottom: 3rem;
+}
+
+.ingredients-section h3 {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredient-item {
+  color: #ccc;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.ingredient-item::before {
+  content: '•';
+  color: #ff4444;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.order-button {
+  font-size: 1.2rem;
+  padding: 15px 40px;
+  border-radius: 30px;
+}
+
+.drink-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drink-image-large {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.drink-image-large:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.drink-image-large.green {
+  border-color: rgba(76, 175, 80, 0.5);
+  box-shadow: 0 0 30px rgba(76, 175, 80, 0.2);
+}
+
+.drink-image-large.yellow {
+  border-color: rgba(255, 235, 59, 0.5);
+  box-shadow: 0 0 30px rgba(255, 235, 59, 0.2);
+}
+
+.drink-image-large.red {
+  border-color: rgba(255, 68, 68, 0.5);
+  box-shadow: 0 0 30px rgba(255, 68, 68, 0.2);
+}
+
+.drink-emoji-large {
+  font-size: 8rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .drink-detail-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .drink-detail-card {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .drink-title {
+    font-size: 2.5rem;
+  }
+
+  .drink-description p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .drink-image-large {
+    width: 250px;
+    height: 250px;
+  }
+
+  .drink-emoji-large {
+    font-size: 6rem;
+  }
+
+  .order-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .drink-detail-content {
+    margin-left: 200px;
+    padding: 1.5rem;
+  }
+
+  .drink-detail-card {
+    gap: 2rem;
+  }
+
+  .drink-title {
+    font-size: 2.5rem;
+  }
+
+  .drink-description p {
+    font-size: 1rem;
+  }
+
+  .drink-image-large {
+    width: 250px;
+    height: 250px;
+  }
+
+  .drink-emoji-large {
+    font-size: 6rem;
+  }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .drink-detail-content {
+    margin-left: 200px;
+    padding: 1rem;
+  }
+
+  .drink-detail-card {
+    gap: 2rem;
+  }
+
+  .drink-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .drink-description {
+    margin-bottom: 1.5rem;
+  }
+
+  .ingredients-section {
+    margin-bottom: 2rem;
+  }
+
+  .drink-image-large {
+    width: 200px;
+    height: 200px;
+  }
+
+  .drink-emoji-large {
+    font-size: 5rem;
+  }
+}
